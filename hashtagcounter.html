@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>tomgou.xyz</title>
+    <title>HashtagCounter - tomgou.xyz</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,15 +10,22 @@
 
     <link href="http://blog.tomgou.xyz/images/carrot.jpg" rel="icon">
 
-<link rel="canonical" href="http://blog.tomgou.xyz">
-        <meta name="author" content="Yuchuan Gou" />
+<link rel="canonical" href="http://blog.tomgou.xyz/hashtagcounter.html">
 
-    <!-- Open Graph tags -->
+        <meta name="author" content="Tom Gou" />
+        <meta name="keywords" content="Java,Fibonacci heap" />
+        <meta name="description" content="This is a project using mas Fibonacci heap to find the n most popular hashtags appeared on social media." />
+
         <meta property="og:site_name" content="tomgou.xyz" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="tomgou.xyz"/>
-        <meta property="og:url" content="http://blog.tomgou.xyz"/>
-        <meta property="og:description" content="tomgou.xyz"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="HashtagCounter"/>
+        <meta property="og:url" content="http://blog.tomgou.xyz/hashtagcounter.html"/>
+        <meta property="og:description" content="This is a project using mas Fibonacci heap to find the n most popular hashtags appeared on social media."/>
+        <meta property="article:published_time" content="2017-02-20" />
+            <meta property="article:section" content="Blogs" />
+            <meta property="article:tag" content="Java" />
+            <meta property="article:tag" content="Fibonacci heap" />
+            <meta property="article:author" content="Tom Gou" />
 
 
     <!-- Bootstrap -->
@@ -50,7 +57,7 @@ tomgou.xyz            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="http://blog.tomgou.xyz/category/blogs.html">Blogs</a>
                         </li>
             </ul>
@@ -67,71 +74,139 @@ tomgou.xyz            </a>
     </div>
 </div> <!-- /.navbar -->
 <!-- Banner -->
-<style>
-	#banner{
-	    background-image:url("http://blog.tomgou.xyz/images/saul.jpg");
-	}
-</style>
-
-<div id="banner">
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	
-</div><!-- End Banner -->
+<!-- End Banner -->
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/hashtagcounter.html">HashtagCounter</a></h2>
-                <div class="summary"><p>This is a project using mas Fibonacci heap to find the n most popular hashtags appeared on social media.</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/hashtagcounter.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.tomgou.xyz/hashtagcounter.html"
+                       rel="bookmark"
+                       title="Permalink to HashtagCounter">
+                        HashtagCounter
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-20T00:58:00+08:00"> Mon 20 February 2017</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://blog.tomgou.xyz/tag/java.html">Java</a>
+        /
+	<a href="http://blog.tomgou.xyz/tag/fibonacci-heap.html">Fibonacci heap</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/kuai-xue-scalachu-ji-a1zheng-li-1.html">快学Scala初级A1整理(1)</a></h2>
-                <div class="summary"><p>Scala是一门有趣且实用的语言，它以JVM位目标环境，将面向对象和函数式编程有机地结合起来，带来独特的编程体验。本文主要整理《快学Scala》中的初级A1部分，适用于Scala的初级应用开发学习。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/kuai-xue-scalachu-ji-a1zheng-li-1.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">使用PyCharm配置Spark的Python开发环境</a></h2>
-                <div class="summary"><p>在本地搭建好Spark 1.6.0后，除了使用spark-submit提交Python程序外，我们可以使用PyCharm这个IDE在本地进行开发调试,提升我们的开发效率。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/shi-yong-intellij-ideapei-zhi-sparkying-yong-kai-fa-huan-jing-ji-yuan-ma-yue-du-huan-jing.html">使用IntelliJ IDEA配置Spark应用开发环境及源码阅读环境</a></h2>
-                <div class="summary"><p>在本地搭建好Spark 1.6.0后，除了使用官方文档中的sbt命令打包，spark-submit提交程序外，我们可以使用IntelliJ IDEA这个IDE在本地进行开发调试，之后再将作业提交到集群生产环境中运行，使用IDE可以提升我们的开发效率。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/shi-yong-intellij-ideapei-zhi-sparkying-yong-kai-fa-huan-jing-ji-yuan-ma-yue-du-huan-jing.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/spark-160-dan-ji-an-zhuang-pei-zhi.html">Spark 1.6.0 单机安装配置</a></h2>
-                <div class="summary"><p>用Ubuntu 14.04.4 LTS当主系统已经有一段时间了，以前在8节点服务器配置过Spark和Hadoop，今天花一点时间在单机部署一下Spark吧，整理好自己的Spark开发环境。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/spark-160-dan-ji-an-zhuang-pei-zhi.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/c-review1.html">C++ Review(1)</a></h2>
-                <div class="summary"><p>决定开始写博客了，留下一些记录，开始一个新起点。最近复习了一些C++的语法，虽然很简单，但就用它开始第一篇博客吧。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/c-review1.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+                <h1>HashtagCounter</h1>
+<p>This is a project using mas Fibonacci heap to find the n most popular hashtags appeared on social media.</p>
+<p>UF COP 5536 Advanced Data Structures Fall 2016 Programming Project</p>
+<h2>Description</h2>
+<p>The system can find the n most popular hashtags appeared on social media such as Facebook or Twitter. And the hashtags will be given from an input file. </p>
+<p>Basic idea for the implementation is to use a max priority structure to find out the most popular hashtags.</p>
+<p>Two useful structures:</p>
+<ol>
+<li>
+<p>Max Fibonacci heap: use to keep track of the frequencies of hashtags.</p>
+</li>
+<li>
+<p>Hash table: Key for the hash table is hashtag and value is pointer to the corresponding node in the Fibonacci heap.</p>
+</li>
+</ol>
+<p>You can assume there will be a large number of hashtags appears in the stream and you need to perform increase key operation many times. Max Fibonacci heap is required because it has better theoretical bounds for increase key operation.</p>
+<h2>Data Structure of the Project</h2>
+<p>The project requires to find the n most popular hashtags. There will be a large number of hashtags appears in the stream and the increase key operation will be performed many times, so Max Fibonacci heap is required because its better theoretical bounds for increase key operation.</p>
+<p>Besides, in order to increase key of a node in Max Fibonacci heap, we need to search the node in Max Fibonacci heap. To realize searching function, I use Hash table to link the hashtag name with the pointer to the corresponding node in heap. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/data_structure.png" /></p>
+<p>Each hashtag is put in the key of hashtable, and the value is the pointer to Fibonacci node.</p>
+<p>Also, hashtable can help to distinguish different hashtags. If the new hashtag is already in the hash table, it need to find the hashtag in hashtable, and search the corresponding node. Implement the increase key operation to this node. If the new hashtag is not in the hash table, this new node should be insert to the Fibonacci heap.</p>
+<h2>Input and Output</h2>
+<p>The program take the input file name as an argumenmt.</p>
+<div class="highlight"><pre><span></span>java hashtagcounter sampleInput.txt
+</pre></div>
+
+
+<h3>Input Format</h3>
+<p>Hashtags appear one per each line in the input file and starts with # sign. After the hashtag an integer will appear and that is the count of the hashtag (There is a space between hashtag and the integer). You need to increment the hashtag by that count. Queries will also be appeared in the input file and once a query appears you should append the output to the output file. Query will be an integer number (n) without # sign in the beginning. You should write the top most n hashtags to the output file. Once it reads the stop (without hashtag) program should end. Following is an example of an input file.</p>
+<div class="highlight"><pre><span></span>#saturday 5 
+#sunday 3 
+#saturday 10 
+#monday 2 
+#reading 4 
+#playing_games 2 
+#saturday 6 
+#sunday 8
+#friday 2 
+#tuesday 2 
+#saturday 12 
+#sunday 11 
+#monday 6 
+3
+#saturday 12 
+#monday 2 
+#stop 3 
+#playing 4 
+#reading 15 
+#drawing 3 
+#friday 12 
+#school 6 
+#class 5
+5 
+stop
+</pre></div>
+
+
+<h3>Output Format</h3>
+<p>Once a query is appeared you need to write down the most popular hashtags of appeared number in to the output file in descending order. Output for a query should be comma separated list without any new lines. Once the output for a query is finished you should put a new line to write the output for another query. </p>
+<p>Following is the output file for the above input file.</p>
+<div class="highlight"><pre><span></span>saturday,sunday,monday
+saturday,sunday,reading,friday,monday
+</pre></div>
+
+
+<h2>Program Structure</h2>
+<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/program_structure.png" /></p>
+            </div>
+            <!-- /.entry-content -->
+            
+    <hr />
+    <!-- AddThis Button BEGIN -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d3af0e9a805928"></script>
+    <!-- AddThis Button END -->
+
+<!-- 多说评论框 start -->
+    <div class="ds-thread"  data-url="blog.tomgou.xyz/hashtagcounter.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tomgou"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+            
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -299,6 +374,8 @@ tomgou.xyz            </a>
         })();
     </script>
     <!-- End Google Analytics Code -->
+
+
 
 </body>
 </html>
