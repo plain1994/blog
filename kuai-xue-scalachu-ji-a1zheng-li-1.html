@@ -141,8 +141,8 @@ $ sudo vim /etc/profile
 
 
 <p>在<code>/etc/profile</code>文件的末尾添加环境变量：</p>
-<div class="highlight"><pre><span></span><span class="x">export SCALA_HOME=/home/tom//scala-2.10.6</span>
-<span class="x">export PATH=</span><span class="p">$</span><span class="nv">SCALA_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+<div class="highlight"><pre><span></span>export SCALA_HOME=/home/tom//scala-2.10.6
+export PATH=$SCALA_HOME/bin:$PATH
 </pre></div>
 
 
@@ -187,7 +187,7 @@ $ sudo vim /etc/profile
 </pre></div>
 
 
-<hr />
+<hr>
 <h3>1.Scala基础</h3>
 <h4>1.1 Scala解释器</h4>
 <p>Scala解释器读到一个表达式，对它求值，将其打印，接着再继续读下一个表达式。这个过程被称为读取-求值-打印-循环，即REPL。</p>
@@ -269,7 +269,7 @@ Scala没有提供<code>++</code>和<code>--</code>操作符，需要使用<code>
 - 类名旁的O和C分别链接到对应的类（C）和伴生对象（O）
 - 标记为implicit的方法对应的是自动隐式转换
 - 方法可以以函数作为参数</p>
-<hr />
+<hr>
 <h3>2.控制流与函数</h3>
 <h4>2.1 条件表达式</h4>
 <p>Scala中的if/else表达式有值，这个值就是if或else后的值，如：</p>
@@ -430,7 +430,7 @@ Scala没有提供<code>++</code>和<code>--</code>操作符，需要使用<code>
 </pre></div>
 
 
-<hr />
+<hr>
 <h3>3.数组</h3>
 <h4>3.1 定长数组Array</h4>
 <div class="highlight"><pre><span></span><span class="k">val</span> <span class="n">nums</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="mi">10</span><span class="o">)</span>
@@ -541,7 +541,7 @@ Scala没有提供<code>++</code>和<code>--</code>操作符，需要使用<code>
 </pre></div>
 
 
-<hr />
+<hr>
 <h3>参考书籍：</h3>
 <ul>
 <li><a href="http://book.douban.com/subject/19971952/">快学Scala </a></li>
@@ -653,6 +653,16 @@ var duoshuoQuery = {short_name:"tomgou"};
                             Spark
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/ubuntu.html">
+                            Ubuntu
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/windows.html">
+                            Windows
+                        </a>
+                    </li>
                 </ul>
             </li>
 
@@ -687,7 +697,7 @@ var duoshuoQuery = {short_name:"tomgou"};
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,

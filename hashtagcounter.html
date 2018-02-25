@@ -148,7 +148,7 @@ tomgou.xyz            </a>
 <h2>Data Structure of the Project</h2>
 <p>The project requires to find the n most popular hashtags. There will be a large number of hashtags appears in the stream and the increase key operation will be performed many times, so Max Fibonacci heap is required because its better theoretical bounds for increase key operation.</p>
 <p>Besides, in order to increase key of a node in Max Fibonacci heap, we need to search the node in Max Fibonacci heap. To realize searching function, I use Hash table to link the hashtag name with the pointer to the corresponding node in heap. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/data_structure.png" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/data_structure.png"></p>
 <p>Each hashtag is put in the key of hashtable, and the value is the pointer to Fibonacci node.</p>
 <p>Also, hashtable can help to distinguish different hashtags. If the new hashtag is already in the hash table, it need to find the hashtag in hashtable, and search the corresponding node. Implement the increase key operation to this node. If the new hashtag is not in the hash table, this new node should be insert to the Fibonacci heap.</p>
 <h2>Input and Output</h2>
@@ -196,7 +196,7 @@ saturday,sunday,reading,friday,monday
 
 
 <h2>Program Structure</h2>
-<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/program_structure.png" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/plain1994/HashtagCounter/master/program_structure.png"></p>
             </div>
             <!-- /.entry-content -->
             
@@ -304,6 +304,16 @@ var duoshuoQuery = {short_name:"tomgou"};
                             Spark
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/ubuntu.html">
+                            Ubuntu
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/windows.html">
+                            Windows
+                        </a>
+                    </li>
                 </ul>
             </li>
 
@@ -338,7 +348,7 @@ var duoshuoQuery = {short_name:"tomgou"};
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,

@@ -145,7 +145,7 @@ tomgou.xyz            </a>
 <li><a href="http://spark.apache.org/downloads.html">spark-1.6.0-bin-hadoop2.6.tgz</a></li>
 </ul>
 <p><br /></p>
-<hr />
+<hr>
 <h3>1.安装jdk</h3>
 <p>解压jdk安装包到任意目录：</p>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> /home/tom
@@ -155,10 +155,10 @@ $ sudo vim /etc/profile
 
 
 <p>编辑/etc/profile文件，在最后加上java环境变量：</p>
-<div class="highlight"><pre><span></span><span class="x">export JAVA_HOME=/home/tom/jdk1.8.0_73/</span>
-<span class="x">export JRE_HOME=/home/tom/jdk1.8.0_73/jre</span>
-<span class="x">export PATH=</span><span class="p">$</span><span class="nv">JAVA_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">JRE_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
-<span class="x">export CLASSPATH=.:</span><span class="p">$</span><span class="nv">JAVA_HOME</span><span class="x">/lib:</span><span class="p">$</span><span class="nv">JRE_HOME</span><span class="x">/lib:</span><span class="p">$</span><span class="nv">CLASSPATH</span><span class="x"></span>
+<div class="highlight"><pre><span></span>export JAVA_HOME=/home/tom/jdk1.8.0_73/
+export JRE_HOME=/home/tom/jdk1.8.0_73/jre
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 </pre></div>
 
 
@@ -173,7 +173,7 @@ $ sudo vim /etc/profile
 
 
 <p><br /></p>
-<hr />
+<hr>
 <h3>2.配置ssh localhost</h3>
 <p>确保安装好ssh：</p>
 <div class="highlight"><pre><span></span>$ sudo apt-get update
@@ -197,7 +197,7 @@ $ <span class="nb">exit</span>
 
 
 <p><br /></p>
-<hr />
+<hr>
 <h3>3.安装hadoop2.6.0</h3>
 <p>解压hadoop2.6.0到任意目录：</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /home/tom
@@ -207,19 +207,19 @@ $ tar -xzvf hadoop-2.6.0.tar.gz
 
 
 <p>编辑<code>/etc/profile</code>文件，在最后加上java环境变量：</p>
-<div class="highlight"><pre><span></span><span class="x">export HADOOP_HOME=/home/tom/hadoop-2.6.0</span>
-<span class="x">export HADOOP_INSTALL=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x"></span>
-<span class="x">export HADOOP_MAPRED_HOME=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x"></span>
-<span class="x">export HADOOP_COMMON_HOME=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x"></span>
-<span class="x">export HADOOP_HDFS_HOME=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x"></span>
-<span class="x">export YARN_HOME=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x"></span>
-<span class="x">export HADOOP_COMMON_LIB_NATIVE_DIR=</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x">/lib/native</span>
-<span class="x">export PATH=</span><span class="p">$</span><span class="nv">PATH</span><span class="x">:</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x">/sbin:</span><span class="p">$</span><span class="nv">HADOOP_HOME</span><span class="x">/bin</span>
+<div class="highlight"><pre><span></span>export HADOOP_HOME=/home/tom/hadoop-2.6.0
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 </pre></div>
 
 
 <p>编辑<code>$HADOOP_HOME/etc/hadoop/hadoop-env.sh</code>文件</p>
-<div class="highlight"><pre><span></span>$ vim $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+<div class="highlight"><pre><span></span>$ vim <span class="nv">$HADOOP_HOME</span>/etc/hadoop/hadoop-env.sh
 </pre></div>
 
 
@@ -229,7 +229,7 @@ $ tar -xzvf hadoop-2.6.0.tar.gz
 
 
 <p>修改Configuration文件：</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> $HADOOP_HOME/etc/hadoop
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> <span class="nv">$HADOOP_HOME</span>/etc/hadoop
 </pre></div>
 
 
@@ -290,12 +290,12 @@ $ tar -xzvf hadoop-2.6.0.tar.gz
 
 
 <p>启动</p>
-<div class="highlight"><pre><span></span>$ $HADOOP_HOME/sbin/start-all.sh
+<div class="highlight"><pre><span></span>$ <span class="nv">$HADOOP_HOME</span>/sbin/start-all.sh
 </pre></div>
 
 
 <p>停止</p>
-<div class="highlight"><pre><span></span>$ $HADOOP_HOME/sbin/stop-all.sh
+<div class="highlight"><pre><span></span>$ <span class="nv">$HADOOP_HOME</span>/sbin/stop-all.sh
 </pre></div>
 
 
@@ -317,7 +317,7 @@ $ tar -xzvf hadoop-2.6.0.tar.gz
 
 
 <p><br /></p>
-<hr />
+<hr>
 <h3>4.安装scala</h3>
 <p>解压scala安装包到任意目录：</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /home/tom
@@ -327,8 +327,8 @@ $ sudo vim /etc/profile
 
 
 <p>在<code>/etc/profile</code>文件的末尾添加环境变量：</p>
-<div class="highlight"><pre><span></span><span class="x">export SCALA_HOME=/home/tom//scala-2.10.6</span>
-<span class="x">export PATH=</span><span class="p">$</span><span class="nv">SCALA_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+<div class="highlight"><pre><span></span>export SCALA_HOME=/home/tom//scala-2.10.6
+export PATH=$SCALA_HOME/bin:$PATH
 </pre></div>
 
 
@@ -343,7 +343,7 @@ $ sudo vim /etc/profile
 
 
 <p><br /></p>
-<hr />
+<hr>
 <h3>5.安装Spark</h3>
 <p>解压spark安装包到任意目录：</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /home/tom
@@ -354,8 +354,8 @@ $ sudo vim /etc/profile
 
 
 <p>在<code>/etc/profile</code>文件的末尾添加环境变量：</p>
-<div class="highlight"><pre><span></span><span class="x">export SPARK_HOME=/home/tom/spark-1.6.0</span>
-<span class="x">export PATH=</span><span class="p">$</span><span class="nv">SPARK_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+<div class="highlight"><pre><span></span>export SPARK_HOME=/home/tom/spark-1.6.0
+export PATH=$SPARK_HOME/bin:$PATH
 </pre></div>
 
 
@@ -379,17 +379,17 @@ export SPARK_WORKER_MEMORY=4G
 
 
 <p>启动</p>
-<div class="highlight"><pre><span></span>$ $SPARK_HOME/sbin/start-all.sh
+<div class="highlight"><pre><span></span>$ <span class="nv">$SPARK_HOME</span>/sbin/start-all.sh
 </pre></div>
 
 
 <p>停止</p>
-<div class="highlight"><pre><span></span>$ $SPARK_HOME/sbin/stop-all.sh
+<div class="highlight"><pre><span></span>$ <span class="nv">$SPARK_HOME</span>/sbin/stop-all.sh
 </pre></div>
 
 
 <p>测试Spark是否安装成功：</p>
-<div class="highlight"><pre><span></span>$ $SPARK_HOME/bin/run-example SparkPi
+<div class="highlight"><pre><span></span>$ <span class="nv">$SPARK_HOME</span>/bin/run-example SparkPi
 </pre></div>
 
 
@@ -506,6 +506,16 @@ var duoshuoQuery = {short_name:"tomgou"};
                             Spark
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/ubuntu.html">
+                            Ubuntu
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/windows.html">
+                            Windows
+                        </a>
+                    </li>
                 </ul>
             </li>
 
@@ -540,7 +550,7 @@ var duoshuoQuery = {short_name:"tomgou"};
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,

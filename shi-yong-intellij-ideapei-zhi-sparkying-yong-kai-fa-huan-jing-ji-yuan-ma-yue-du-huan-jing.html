@@ -140,19 +140,19 @@ tomgou.xyz            </a>
 </ul>
 <p>记得在IntelliJ IDEA的“Configure”菜单中，选择“Plugins”，安装“Scala”插件。</p>
 <p><br /></p>
-<hr />
+<hr>
 <h3>1.以本地local模式运行Spark程序</h3>
 <p>1）创建“New Project”，选择“Scala”。“Project SDK”选择JDK目录，“Scala SDK”选择Scala目录。
-<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf1.png" /></p>
+<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf1.png"></p>
 <p>2）选择菜单中的“File” -&gt;“Project Structure” -&gt;“libraries” -&gt;+“java”，导入Spark安装目录<code>/home/tom/spark-1.6.0/lib</code>下的“<code>spark-assembly-1.6.0-hadoop2.6.0.jar</code>”。</p>
 <p>3）运行Scala示例程序SparkPi：
 Spark安装目录的examples目录下，可以找到Scala编写的示例程序<code>SparkPi.scala</code>，该程序计算Pi值并输出。
 在Project的main目录下新建<code>SparkPitest.scala</code>，复制Spark示例程序代码。
-<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf2.png" />
+<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf2.png">
 选择菜单中的“Run” -&gt;“Edit Configurations”，修改“Main class”和“VM options”。
-<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf3.png" /></p>
+<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf3.png"></p>
 <p>运行结果：
-<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf4.png" /></p>
+<img alt="idea_conf1" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf4.png"></p>
 <p>注意：
 在我最初运行Spark的测试程序SparkPi时，点击运行，出现了如下错误：
 Exception in thread "main" org.apache.spark.SparkException: A master URL must be set in your configuration
@@ -169,20 +169,20 @@ Exception in thread "main" org.apache.spark.SparkException: A master URL must be
 </ul>
 <p>在VM options中输入“<code>-Dspark.master=local</code>”，指示本程序本地单线程运行。</p>
 <p><br /></p>
-<hr />
+<hr>
 <h3>2.生成jar包提交到集群</h3>
 <p>1）和本地local模式运行Spark相同，我们建立起project。</p>
 <p>2）选择菜单中的“File” -&gt;“Project Structure” -&gt;“Artifact” -&gt;“jar” -&gt;“From Modules with dependencies”，之后选择Main Class和输出jar的Directory。
-<img alt="idea_conf6" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf6.png" />
-<img alt="idea_conf5" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf5.png" />
+<img alt="idea_conf6" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf6.png">
+<img alt="idea_conf5" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf5.png">
 3）在主菜单选择“Build” -&gt;“Build Artifact”，编译生成jar包。
 4）将jar包使用<code>spark-submit</code>提交：</p>
-<div class="highlight"><pre><span></span>$SPARK_HOME/bin/spark-submit --class <span class="s2">&quot;SimpleApp&quot;</span> --master local<span class="o">[</span>4<span class="o">]</span> simple.jar 
+<div class="highlight"><pre><span></span><span class="nv">$SPARK_HOME</span>/bin/spark-submit --class <span class="s2">&quot;SimpleApp&quot;</span> --master local<span class="o">[</span><span class="m">4</span><span class="o">]</span> simple.jar 
 </pre></div>
 
 
 <p><br /></p>
-<hr />
+<hr>
 <h3>3.配置Spark源码阅读环境</h3>
 <p>克隆Spark源码：</p>
 <div class="highlight"><pre><span></span>$ git clone https://github.com/apache/spark
@@ -190,7 +190,7 @@ Exception in thread "main" org.apache.spark.SparkException: A master URL must be
 
 
 <p>然后在IntelliJ IDEA中即可通过“Import Project”，选择sbt项目，选择“Use auto-import”，即可生成IntelliJ项目文件。</p>
-<p><img alt="idea_conf7" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf7.png" /></p>
+<p><img alt="idea_conf7" src="http://7xra46.com1.z0.glb.clouddn.com/blog3_idea/idea_conf7.png"></p>
             </div>
             <!-- /.entry-content -->
             
@@ -298,6 +298,16 @@ var duoshuoQuery = {short_name:"tomgou"};
                             Spark
                         </a>
                     </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/ubuntu.html">
+                            Ubuntu
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/windows.html">
+                            Windows
+                        </a>
+                    </li>
                 </ul>
             </li>
 
@@ -332,7 +342,7 @@ var duoshuoQuery = {short_name:"tomgou"};
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,
