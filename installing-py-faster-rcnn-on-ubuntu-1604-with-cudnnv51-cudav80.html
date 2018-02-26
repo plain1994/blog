@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060) - tomgou.xyz</title>
+    <title>Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0 - tomgou.xyz</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,21 +10,23 @@
 
     <link href="http://blog.tomgou.xyz/images/carrot.jpg" rel="icon">
 
-<link rel="canonical" href="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html">
+<link rel="canonical" href="http://blog.tomgou.xyz/installing-py-faster-rcnn-on-ubuntu-1604-with-cudnnv51-cudav80.html">
 
         <meta name="author" content="Tom Gou" />
-        <meta name="keywords" content="Ubuntu,Windows" />
-        <meta name="description" content="Installing Ubuntu 16.04 LTS with Windows 10" />
+        <meta name="keywords" content="Ubuntu,py-faster-rcnn,CUDNN,CUDAv8" />
+        <meta name="description" content="Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0." />
 
         <meta property="og:site_name" content="tomgou.xyz" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)"/>
-        <meta property="og:url" content="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"/>
-        <meta property="og:description" content="Installing Ubuntu 16.04 LTS with Windows 10"/>
-        <meta property="article:published_time" content="2018-02-23" />
+        <meta property="og:title" content="Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0"/>
+        <meta property="og:url" content="http://blog.tomgou.xyz/installing-py-faster-rcnn-on-ubuntu-1604-with-cudnnv51-cudav80.html"/>
+        <meta property="og:description" content="Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0."/>
+        <meta property="article:published_time" content="2018-02-25" />
             <meta property="article:section" content="Blogs" />
             <meta property="article:tag" content="Ubuntu" />
-            <meta property="article:tag" content="Windows" />
+            <meta property="article:tag" content="py-faster-rcnn" />
+            <meta property="article:tag" content="CUDNN" />
+            <meta property="article:tag" content="CUDAv8" />
             <meta property="article:author" content="Tom Gou" />
 
 
@@ -101,10 +103,10 @@ tomgou.xyz            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"
+                    <a href="http://blog.tomgou.xyz/installing-py-faster-rcnn-on-ubuntu-1604-with-cudnnv51-cudav80.html"
                        rel="bookmark"
-                       title="Permalink to Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)">
-                        Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)
+                       title="Permalink to Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0">
+                        Installing py-faster-rcnn on Ubuntu 16.04 with CUDNNv5.1, CUDAv8.0
                     </a>
                 </h1>
             </header>
@@ -114,7 +116,7 @@ tomgou.xyz            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2018-02-23T16:08:00+08:00"> Fri 23 February 2018</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-02-25T17:12:00+08:00"> Sun 25 February 2018</time>
     </span>
 
 
@@ -124,65 +126,170 @@ tomgou.xyz            </a>
 <span class="label label-default">Tags</span>
 	<a href="http://blog.tomgou.xyz/tag/ubuntu.html">Ubuntu</a>
         /
-	<a href="http://blog.tomgou.xyz/tag/windows.html">Windows</a>
+	<a href="http://blog.tomgou.xyz/tag/py-faster-rcnn.html">py-faster-rcnn</a>
+        /
+	<a href="http://blog.tomgou.xyz/tag/cudnn.html">CUDNN</a>
+        /
+	<a href="http://blog.tomgou.xyz/tag/cudav8.html">CUDAv8</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <h3>1. Disable fast startup, hiberation</h3>
-<p>(1) Right-click the Start button.</p>
-<p>(2) Click Search.</p>
-<p>(3) Type Control Panel and hit Enter on your keyboard.</p>
-<p>(4) Click Power Options.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-02.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-02.jpeg"></p>
-<p>(5) Click Choose what the power buttons do.</p>
-<p>(6) Click Change settings that are currently unavailable.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-03.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-03.jpeg"></p>
-<p>(7) Click Turn on fast startup (recommended) so that the checkmark disappears.</p>
-<p>(8) Click Save changes.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-04.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-04.jpeg"></p>
-<p>Then disable hibernation, see reference2.</p>
-<p>Reference:</p>
-<p>[1] <a href="https://www.windowscentral.com/how-disable-windows-10-fast-startup">https://www.windowscentral.com/how-disable-windows-10-fast-startup</a></p>
-<p>[2] <a href="https://www.pugetsystems.com/labs/support-software/How-to-disable-Sleep-Mode-or-Hibernation-793/">https://www.pugetsystems.com/labs/support-software/How-to-disable-Sleep-Mode-or-Hibernation-793/</a></p>
-<h3>2. Disable secure boot, change boot to uefi</h3>
-<p>Simply do it in BIOS.</p>
-<h3>3. Set sata operation to achi (safeboot minimal to change)</h3>
-<p>If you change SATA Operation Mode in computer BIOS after Windows OS installation, you will most likely get a Blue Screen of Death (BSOD) next time Windows boots.</p>
-<p>To prevent this, you need to make sure the first boot after SATA Mode change is done in Safe Mode.</p>
-<p>Start &gt; Run type msconfig and press Enter</p>
-<p>Change to Boot tab and under Boot option select Safe Mode and Minimal</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/0771_change-sata-operation-mode_1.png" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/0771_change-sata-operation-mode_1.png"></p>
-<p>Clock OK and restart computer</p>
-<p>Now go into BIOS change the SATA Operation Mode from RAID to AHCI</p>
-<p>Let Windows boot into Safe Mode</p>
-<p>Start &gt; Run type msconfig and press Enter</p>
-<p>Change to Boot tab and under Boot option clear checkbox next to Safe Mode</p>
-<p>Reboot computer</p>
-<p>Reference:</p>
-<p>[1] <a href="https://www.mysysadmintips.com/windows/clients/771-change-sata-operation-mode-from-raid-to-ahci-without-re-installing-windows">https://www.mysysadmintips.com/windows/clients/771-change-sata-operation-mode-from-raid-to-ahci-without-re-installing-windows</a></p>
-<h3>4. Changing ubuntu Boot Parameters Temporarily</h3>
-<p>You have very new graphics hardware, which is known to have compatibility issues with the open source nouveau drivers, especially when it comes to the NVIDIA GTX 10xx GPU adapter series.</p>
-<p>Boot the Ubuntu installation media you have created and select 'Try Ubuntu without installing'.
-Press the E key and add the parameter nouveau.modeset=0 at the end of the linux line.
-(Note : Set a Space between the last character in the linux line and nouveau.modeset=0)
-Press the F10 key to boot into the Ubuntu Live desktop and start the installation of Ubuntu.</p>
-<p>After the installation has finished, boot into BIOS and select Ubuntu as the default system to boot.
-Add the same parameter again when booting the freshly installed Ubuntu system for the first time.
-Now, before doing something else ... install the latest stable NVIDIA drivers from a virtual console.</p>
-<p>When the login screen appears press : Ctrl+Alt+F1
-Enter your user name and the password, then execute :</p>
-<div class="highlight"><pre><span></span>sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt install nvidia-390 nvidia-prime
-sudo reboot  
+                <p>Environment:
+Ubuntu 16.04, Python 2.7, GTX1060, opencv 3.0.0, CUDA 8.0, cuDNN 5.1</p>
+<h3>1. Install Dependencies and Numpy</h3>
+<div class="highlight"><pre><span></span>sudo apt-get update
+sudo apt-get upgrade
 </pre></div>
 
 
-<p>Additional information : Do not forget to disable Fast startup and Hibernation in Windows.
-In case that the USB still doesn't boot properly, use the parameter nomodeset instead of nouveau.modeset=0. If this also does not work : create a new and properly booting USB installation media as explained in chat and described in the answer to an earlier question.</p>
+<div class="highlight"><pre><span></span>sudo apt-get install build-essential cmake git pkg-config libjpeg8-dev <span class="se">\</span>
+libjasper-dev libpng12-dev libgtk2.0-dev <span class="se">\</span>
+libavcodec-dev libavformat-dev libswscale-dev libv4l-dev gfortran
+sudo apt-get install libtiff5-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install python2.7-dev
+</pre></div>
+
+
+<p>Choose the numpy version 1.11.0, because the py-faster-rcnn was based on that version, the later version will caused error.</p>
+<div class="highlight"><pre><span></span>sudo pip install <span class="nv">numpy</span><span class="o">==</span><span class="m">1</span>.11.0
+</pre></div>
+
+
+<h3>2. Install opencv 3.0</h3>
+<p>Use git to checkout the 3.0.0 version.</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+git clone https://github.com/Itseez/opencv.git
+<span class="nb">cd</span> opencv
+git checkout <span class="m">3</span>.0.0
+<span class="nb">cd</span> ~
+git clone https://github.com/Itseez/opencv_contrib.git
+<span class="nb">cd</span> opencv_contrib
+git checkout <span class="m">3</span>.0.0
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/opencv
+mkdir build
+<span class="nb">cd</span> build
+cmake -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RELEASE <span class="se">\</span>
+    -D <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local <span class="se">\</span>
+    -D <span class="nv">INSTALL_C_EXAMPLES</span><span class="o">=</span>ON <span class="se">\</span>
+    -D <span class="nv">INSTALL_PYTHON_EXAMPLES</span><span class="o">=</span>ON <span class="se">\</span>
+    -D <span class="nv">OPENCV_EXTRA_MODULES_PATH</span><span class="o">=</span>~/opencv_contrib/modules <span class="se">\</span>
+    -D <span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>ON ..
+
+make
+sudo make install
+sudo ldconfig
+</pre></div>
+
+
+<p>Check:</p>
+<div class="highlight"><pre><span></span>python
+&gt;&gt;&gt; import cv2
+&gt;&gt;&gt; cv2.__version__
+<span class="s1">&#39;3.0.0&#39;</span>
+</pre></div>
+
+
+<h3>2. Install CUDA, cuDNN</h3>
+<p>Download and install CUDA, choose version 8.0:</p>
+<p><a href="https://developer.nvidia.com/cuda-80-ga2-download-archive">https://developer.nvidia.com/cuda-80-ga2-download-archive</a>.</p>
+<p>Download cuDNN, choose version 5.1</p>
+<p><a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></p>
+<p>After the download process completes, extract the downloaded file:</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads
+tar -xvf cudnn-7.0-linux-x64-v4.0-prod.tgz
+</pre></div>
+
+
+<p>Copy the two extracted folders to where CUDA was installed:</p>
+<div class="highlight"><pre><span></span>sudo cp lib64/* /usr/local/cuda/lib64
+sudo cp include/* /usr/local/cuda/include
+</pre></div>
+
+
+<h3>3. Install py-faster-rcnn</h3>
+<p>Install dependencies:</p>
+<div class="highlight"><pre><span></span>sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev <span class="se">\</span>
+libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
+sudo apt-get install -y --no-install-recommends libboost-all-dev
+</pre></div>
+
+
+<p>Follow the github readme:</p>
+<p><a href="https://github.com/rbgirshick/py-faster-rcnn">https://github.com/rbgirshick/py-faster-rcnn</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># Make sure to clone with --recursive</span>
+git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+</pre></div>
+
+
+<p>Build the Cython modules</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$FRCN_ROOT</span>/lib
+make
+</pre></div>
+
+
+<p>Install cython, python-opencv, easydict.</p>
+<p>For the support of cuDNN v5.1, we need to merge caffe master branch into caffe-fast-rcnn.</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> caffe-fast-rcnn  
+git remote add caffe https://github.com/BVLC/caffe.git  
+git fetch caffe  
+git merge -X theirs caffe/master  
+</pre></div>
+
+
+<p>Remove self_.attr("phase") = static_cast<int>(this-&gt;phase_); from include/caffe/layers/python_layer.hpp after merging.</p>
+<p>After merging, create the Makefile.config file from the example file and modify it.</p>
+<div class="highlight"><pre><span></span><span class="c1"># cuDNN acceleration switch (uncomment to build with cuDNN).</span>
+USE_CUDNN :<span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Uncomment if you&#39;re using OpenCV 3</span>
+OPENCV_VERSION :<span class="o">=</span> <span class="m">3</span>
+
+<span class="c1"># We need to be able to find Python.h and numpy/arrayobject.h.</span>
+PYTHON_INCLUDE :<span class="o">=</span> /usr/include/python2.7 <span class="se">\</span>
+        /usr/local/lib/python2.7/dist-packages/numpy/core/include
+
+<span class="c1"># Uncomment to support layers written in Python (will link against    Python libs)</span>
+WITH_PYTHON_LAYER :<span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Whatever else you find you need goes here.</span>
+INCLUDE_DIRS :<span class="o">=</span> <span class="k">$(</span>PYTHON_INCLUDE<span class="k">)</span> /usr/local/include /usr/include/hdf5/serial
+LIBRARY_DIRS :<span class="o">=</span> <span class="k">$(</span>PYTHON_LIB<span class="k">)</span> /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+</pre></div>
+
+
+<p>Build Caffe and pycaffe:</p>
+<div class="highlight"><pre><span></span>mkdir build
+<span class="nb">cd</span> build
+cmake ..
+make all -j8
+make pycaffe -j8
+</pre></div>
+
+
+<h3>4. Test py-faster-rcnn</h3>
+<p>Download pre-computed Faster R-CNN detectors:</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$FRCN_ROOT</span>
+./data/scripts/fetch_faster_rcnn_models.sh
+</pre></div>
+
+
+<p>Run the demo:</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$FRCN_ROOT</span>
+./tools/demo.py
+</pre></div>
+
+
 <p>Reference:</p>
-<p>[1] <a href="https://askubuntu.com/questions/886629/how-can-i-successfully-boot-my-ubuntu-live-usb">https://askubuntu.com/questions/886629/how-can-i-successfully-boot-my-ubuntu-live-usb</a></p>
-<p>[2] <a href="http://blog.csdn.net/xiaohu50/article/details/78514564">http://blog.csdn.net/xiaohu50/article/details/78514564</a></p>
+<p>[1] <a href="https://chunml.github.io/ChunML.github.io/project/Installing-Caffe-Ubuntu/">https://chunml.github.io/ChunML.github.io/project/Installing-Caffe-Ubuntu/</a></p>
+<p>[2] <a href="https://github.com/rbgirshick/py-faster-rcnn">https://github.com/rbgirshick/py-faster-rcnn</a></p>
+<p>[3] <a href="http://caffe.berkeleyvision.org/installation.html">http://caffe.berkeleyvision.org/installation.html</a></p>
+<p>[4] <a href="https://github.com/rbgirshick/py-faster-rcnn/issues/237">https://github.com/rbgirshick/py-faster-rcnn/issues/237</a></p>
+<p>[5] <a href="https://github.com/rbgirshick/py-faster-rcnn/issues/198">https://github.com/rbgirshick/py-faster-rcnn/issues/198</a></p>
+<p>[6] <a href="http://blog.csdn.net/nicky_lyu/article/details/53181434">http://blog.csdn.net/nicky_lyu/article/details/53181434</a></p>
             </div>
             <!-- /.entry-content -->
             
@@ -195,7 +302,7 @@ In case that the USB still doesn't boot properly, use the parameter nomodeset in
     <!-- AddThis Button END -->
 
 <!-- 多说评论框 start -->
-    <div class="ds-thread"  data-url="blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"></div>
+    <div class="ds-thread"  data-url="blog.tomgou.xyz/installing-py-faster-rcnn-on-ubuntu-1604-with-cudnnv51-cudav80.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

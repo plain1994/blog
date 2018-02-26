@@ -5,28 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.tomgou.xyz/</loc>
-<lastmod>2018-02-25T16:28:30-00:00</lastmod>
+<lastmod>2018-02-25T21:47:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.tomgou.xyz/archives.html</loc>
-<lastmod>2018-02-25T16:28:30-00:00</lastmod>
+<lastmod>2018-02-25T21:47:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.tomgou.xyz/tags.html</loc>
-<lastmod>2018-02-25T16:28:30-00:00</lastmod>
+<lastmod>2018-02-25T21:47:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.tomgou.xyz/categories.html</loc>
-<lastmod>2018-02-25T16:28:30-00:00</lastmod>
+<lastmod>2018-02-25T21:47:06-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.tomgou.xyz/installing-py-faster-rcnn-on-ubuntu-1604-with-cudnnv51-cudav80.html</loc>
+<lastmod>2018-02-25T17:12:00+08:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -82,14 +89,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.tomgou.xyz/category/blogs.html</loc>
-<lastmod>2018-02-23T16:08:00+08:06</lastmod>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.tomgou.xyz/tag/ubuntu.html</loc>
-<lastmod>2018-02-23T16:08:00+08:06</lastmod>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.tomgou.xyz/tag/py-faster-rcnn.html</loc>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.tomgou.xyz/tag/cudnn.html</loc>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.tomgou.xyz/tag/cudav8.html</loc>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -187,7 +215,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.tomgou.xyz/author/tom-gou.html</loc>
-<lastmod>2018-02-23T16:08:00+08:06</lastmod>
+<lastmod>2018-02-25T17:12:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
