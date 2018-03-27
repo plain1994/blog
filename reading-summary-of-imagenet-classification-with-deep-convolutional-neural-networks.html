@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060) - tomgou.xyz</title>
+    <title>Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks - tomgou.xyz</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,21 +10,20 @@
 
     <link href="http://blog.tomgou.xyz/images/carrot.jpg" rel="icon">
 
-<link rel="canonical" href="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html">
+<link rel="canonical" href="http://blog.tomgou.xyz/reading-summary-of-imagenet-classification-with-deep-convolutional-neural-networks.html">
 
         <meta name="author" content="Tom Gou" />
-        <meta name="keywords" content="Ubuntu,Windows" />
-        <meta name="description" content="Installing Ubuntu 16.04 LTS with Windows 10" />
+        <meta name="keywords" content="CNN" />
+        <meta name="description" content="Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks" />
 
         <meta property="og:site_name" content="tomgou.xyz" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)"/>
-        <meta property="og:url" content="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"/>
-        <meta property="og:description" content="Installing Ubuntu 16.04 LTS with Windows 10"/>
-        <meta property="article:published_time" content="2018-02-23" />
+        <meta property="og:title" content="Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks"/>
+        <meta property="og:url" content="http://blog.tomgou.xyz/reading-summary-of-imagenet-classification-with-deep-convolutional-neural-networks.html"/>
+        <meta property="og:description" content="Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks"/>
+        <meta property="article:published_time" content="2018-03-01" />
             <meta property="article:section" content="Blogs" />
-            <meta property="article:tag" content="Ubuntu" />
-            <meta property="article:tag" content="Windows" />
+            <meta property="article:tag" content="CNN" />
             <meta property="article:author" content="Tom Gou" />
 
 
@@ -101,10 +100,10 @@ tomgou.xyz            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"
+                    <a href="http://blog.tomgou.xyz/reading-summary-of-imagenet-classification-with-deep-convolutional-neural-networks.html"
                        rel="bookmark"
-                       title="Permalink to Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)">
-                        Installing Ubuntu 16.04 LTS with Windows 10, Alienware 15 R3 (GTX1060)
+                       title="Permalink to Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks">
+                        Reading Summary of ImageNet Classification with Deep Convolutional Neural Networks
                     </a>
                 </h1>
             </header>
@@ -114,7 +113,7 @@ tomgou.xyz            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2018-02-23T16:08:00+08:00"> Fri 23 February 2018</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-03-01T17:02:00+08:00"> Thu 01 March 2018</time>
     </span>
 
 
@@ -122,67 +121,43 @@ tomgou.xyz            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://blog.tomgou.xyz/tag/ubuntu.html">Ubuntu</a>
-        /
-	<a href="http://blog.tomgou.xyz/tag/windows.html">Windows</a>
+	<a href="http://blog.tomgou.xyz/tag/cnn.html">CNN</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <h3>1. Disable fast startup, hiberation</h3>
-<p>(1) Right-click the Start button.</p>
-<p>(2) Click Search.</p>
-<p>(3) Type Control Panel and hit Enter on your keyboard.</p>
-<p>(4) Click Power Options.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-02.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-02.jpeg"></p>
-<p>(5) Click Choose what the power buttons do.</p>
-<p>(6) Click Change settings that are currently unavailable.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-03.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-03.jpeg"></p>
-<p>(7) Click Turn on fast startup (recommended) so that the checkmark disappears.</p>
-<p>(8) Click Save changes.</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-04.jpeg" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/fast-startup-disable-04.jpeg"></p>
-<p>Then disable hibernation, see reference2.</p>
+                <h3>1. Introduction</h3>
+<p>In the past few years, the major methods for object recognition are machine learning. This is due to the relatively small datasets of labeled images. Machine learning does well with small size datasets, for example, the best error rate on the MINST digit-recognition task approaches human performance. Later, the shortcomings of large datasets was recognized and people collected some large image datasets like ImageNet, which contains millions labeled high-resolution images. </p>
+<p>Thus, we need a model with large learning capacity and convolutional neural networks (CNNs) have that ability by varying the depth and breadth. Also, current GPUs are powerful with highly-optimized implementation of 2D convolution, and GPUs are suitable for training large CNN models. This paper provide a large convolutional neural network and trained it on subsets of ImageNet. It achieved best results in ILSVRC-2010 and ILSVRC-2012 competitions. </p>
+<h3>2. Related Work</h3>
+<p>Convolutional neural network comes from LeNet, and the CNN is this paper is much larger and deeper.
+ReLU comes from Hilton’s another paper, and this method is useful for faster learning in this CNN.</p>
+<h3>3. Architecture</h3>
+<p>The convolutional neural network in this paper contains eight learned layers (five convolutional and three fully-connected layers). The ReLU nonlinearity was applied in the model to reduce the training time. Multiple GPUs training, local response normalization and overlapping pooling are applied in the network for better performance. Besides, overfitting is a significant problem for this network because of its size. The paper provides two data augmentation methods (generating images translations, altering the intensity of RGB channels) and “dropout” method to prevent overfitting.</p>
+<h3>4. Strong Points</h3>
+<p>(1) ReLU Nonlinearity</p>
+<p>This paper replace the normal neuron’s output function tanh (or sigmoid) with Rectified Linear Units (ReLUs). When training with gradient descent, saturating nonlinearities are slower than non-saturating nonlinearities f(x) = max(0, x). A four-layer convolutional neural networks with ReLUs reaches a 25% training error rate on CIFAR-10 six times faster than an equivalent network with tanh neurons.</p>
+<p>(2) Overlapping Pooling</p>
+<p>Pooling layers summarize the outputs of neighboring groups of neurons in the same kernel map. Non overlapping pooling is the traditional way, and with overlapping pooling, the top-1 and top-5 error rates are reduced by 0.4% and 0.3%.</p>
+<p>(3) Data Augmentation</p>
+<p>The most common method to reduce overfitting on image data is to artificially enlarge the database using image transformations. </p>
+<p>The first form of data augmentation is generating image translations and horizontal reflections. The paper extracts random 224 * 224 patches with their horizontal reflections from the 256 * 256 images and using these generating images for training. During testing, the network makes prediction by extracting ten 224 * 224 patches (the four corners and center patches with their horizontal reflections), and gets average predictions by softmax layer on the ten patches.</p>
+<p>The second form of data augmentation is altering the intensities of the RGB channels in training images. The paper performs PCA on the set of RGB pixel values. This scheme reduces the top-1 error rate by over 1%.</p>
+<p>(4) Dropout</p>
+<p>Combining the predictions of many models is a way to reduce test errors but it is expensive for large neural networks. A very efficient version of model combination is “dropout”, which only costs about a factor of two during training. This method zero the output of each hidden neuron with probability 0.5. The neurons which dropped out do not contribute to the forward pass and do not participate in back propagation. This method samples a different architecture, and all the architectures share weights. The paper use dropout in the first two fully-connected layers, and without dropout, the network has overfitting. Dropout doubles the iteration times required to converge.</p>
+<h3>5. Weak Points</h3>
+<p>(1) ReLU Disadvantage</p>
+<p>I have read some article that ReLU tends to blow up activation (there is no mechanism to constrain the output of the neuron, as "a" itself is the output). Thus maybe it cannot be used in some models. The ReLU will close the gate during back-propagation if and only if it closed the gate during forward propagation. A dead ReLU  is likely to stay dead.</p>
+<p>(2) GPU Training</p>
+<p>In this paper, they trained the convolutional neural network on two GTX 580 GPU. This is because the 3GB memory size of GTX 580 GPU limits the maximum size of the networks can be trained on it. And they have to spread the network across two GPUs. From the testing results, we know that the two GPUs reduced top-1 and top-5 error rates by 1.7% and 1.2% than one GPU.  This comparison is biased in favor of the one-GPU net, since it is bigger than “half the size” of the two-GPU net. Also, in Figure 3, the 48 kernels on GPU1 is color-agnostic and the 48 kernels on GPU2 is color-specific, and the author did not provide any explanation for this.</p>
+<p>(3) Normal Distribution Disadvantage</p>
+<p>Use normal distribution to initiate the weights in the neural networks cannot effective solve the problem of gradient vanishing.</p>
+<p>(4) Local Response Normalization not Useful Enough</p>
+<p>Many types of normalization layers have been proposed for use in CNN architectures, sometimes with the intentions of implementing inhibition schemes observed in the biological brain. However, these layers have recently fallen out of favor because in practice their contribution has been shown to be minimal, if any.</p>
+<h3>6. New Idea and Future Work</h3>
+<p>The future convolutional neural networks like VGG, GoogleNet and ResNet become more and more deeper. And their kernel sizes are designed smaller. Thus deeper CNN is known to have better performance, and we can make it deeper. Besides, as I told before, the normal distribution to initiate the weights cannot effective solve the problem of gradient vanishing. Maybe some good distribution applied into CNN can have better performance. Last, the ReLU will close the gate during back-propagation if and only if it closed the gate during forward propagation. Some new ReLU algorithm maybe able to solve this problem.</p>
 <p>Reference:</p>
-<p>[1] <a href="https://www.windowscentral.com/how-disable-windows-10-fast-startup">https://www.windowscentral.com/how-disable-windows-10-fast-startup</a></p>
-<p>[2] <a href="https://www.pugetsystems.com/labs/support-software/How-to-disable-Sleep-Mode-or-Hibernation-793/">https://www.pugetsystems.com/labs/support-software/How-to-disable-Sleep-Mode-or-Hibernation-793/</a></p>
-<h3>2. Disable secure boot, change boot to uefi</h3>
-<p>Simply do it in BIOS.</p>
-<h3>3. Set sata operation to achi (safeboot minimal to change)</h3>
-<p>If you change SATA Operation Mode in computer BIOS after Windows OS installation, you will most likely get a Blue Screen of Death (BSOD) next time Windows boots.</p>
-<p>To prevent this, you need to make sure the first boot after SATA Mode change is done in Safe Mode.</p>
-<p>Start &gt; Run type msconfig and press Enter</p>
-<p>Change to Boot tab and under Boot option select Safe Mode and Minimal</p>
-<p><img alt="https://raw.githubusercontent.com/plain1994/blog_img/master/img/0771_change-sata-operation-mode_1.png" src="https://raw.githubusercontent.com/plain1994/blog_img/master/img/0771_change-sata-operation-mode_1.png"></p>
-<p>Clock OK and restart computer</p>
-<p>Now go into BIOS change the SATA Operation Mode from RAID to AHCI</p>
-<p>Let Windows boot into Safe Mode</p>
-<p>Start &gt; Run type msconfig and press Enter</p>
-<p>Change to Boot tab and under Boot option clear checkbox next to Safe Mode</p>
-<p>Reboot computer</p>
-<p>Reference:</p>
-<p>[1] <a href="https://www.mysysadmintips.com/windows/clients/771-change-sata-operation-mode-from-raid-to-ahci-without-re-installing-windows">https://www.mysysadmintips.com/windows/clients/771-change-sata-operation-mode-from-raid-to-ahci-without-re-installing-windows</a></p>
-<h3>4. Changing ubuntu Boot Parameters Temporarily</h3>
-<p>You have very new graphics hardware, which is known to have compatibility issues with the open source nouveau drivers, especially when it comes to the NVIDIA GTX 10xx GPU adapter series.</p>
-<p>Boot the Ubuntu installation media you have created and select 'Try Ubuntu without installing'.
-Press the E key and add the parameter nouveau.modeset=0 at the end of the linux line.
-(Note : Set a Space between the last character in the linux line and nouveau.modeset=0)
-Press the F10 key to boot into the Ubuntu Live desktop and start the installation of Ubuntu.</p>
-<p>After the installation has finished, boot into BIOS and select Ubuntu as the default system to boot.
-Add the same parameter again when booting the freshly installed Ubuntu system for the first time.
-Now, before doing something else ... install the latest stable NVIDIA drivers from a virtual console.</p>
-<p>When the login screen appears press : Ctrl+Alt+F1
-Enter your user name and the password, then execute :</p>
-<div class="highlight"><pre><span></span>sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-sudo apt install nvidia-390 nvidia-prime
-sudo reboot  
-</pre></div>
-
-
-<p>Additional information : Do not forget to disable Fast startup and Hibernation in Windows.
-In case that the USB still doesn't boot properly, use the parameter nomodeset instead of nouveau.modeset=0. If this also does not work : create a new and properly booting USB installation media as explained in chat and described in the answer to an earlier question.</p>
-<p>Reference:</p>
-<p>[1] <a href="https://askubuntu.com/questions/886629/how-can-i-successfully-boot-my-ubuntu-live-usb">https://askubuntu.com/questions/886629/how-can-i-successfully-boot-my-ubuntu-live-usb</a></p>
-<p>[2] <a href="http://blog.csdn.net/xiaohu50/article/details/78514564">http://blog.csdn.net/xiaohu50/article/details/78514564</a></p>
+<p>[1] <a href="http://www.jixuweifeng.com/2016/07/24/AlexNet%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91/">http://www.jixuweifeng.com/2016/07/24/AlexNet%E8%AE%BA%E6%96%87%E7%BF%BB%E8%AF%91/</a></p>
+<p>[2] <a href="https://www.zhihu.com/search?type=content&amp;q=alexnet">https://www.zhihu.com/search?type=content&amp;q=alexnet</a></p>
             </div>
             <!-- /.entry-content -->
             
@@ -195,7 +170,7 @@ In case that the USB still doesn't boot properly, use the parameter nomodeset in
     <!-- AddThis Button END -->
 
 <!-- 多说评论框 start -->
-    <div class="ds-thread"  data-url="blog.tomgou.xyz/installing-ubuntu-1604-lts-with-windows-10-alienware-15-r3-gtx1060.html"></div>
+    <div class="ds-thread"  data-url="blog.tomgou.xyz/reading-summary-of-imagenet-classification-with-deep-convolutional-neural-networks.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

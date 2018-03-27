@@ -240,7 +240,7 @@ git merge -X theirs caffe/master
 </pre></div>
 
 
-<p>Remove self_.attr("phase") = static_cast<int>(this-&gt;phase_); from include/caffe/layers/python_layer.hpp after merging.</p>
+<p>Remove <code>self_.attr("phase") = static_cast&lt;int&gt;(this-&gt;phase_);</code> from <code>include/caffe/layers/python_layer.hpp</code> after merging.</p>
 <p>After merging, create the Makefile.config file from the example file and modify it.</p>
 <div class="highlight"><pre><span></span><span class="c1"># cuDNN acceleration switch (uncomment to build with cuDNN).</span>
 USE_CUDNN :<span class="o">=</span> <span class="m">1</span>
@@ -345,6 +345,11 @@ var duoshuoQuery = {short_name:"tomgou"};
                     <li class="list-group-item tag-4">
                         <a href="http://blog.tomgou.xyz/tag/cc.html">
                             C/C++
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://blog.tomgou.xyz/tag/cnn.html">
+                            CNN
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
