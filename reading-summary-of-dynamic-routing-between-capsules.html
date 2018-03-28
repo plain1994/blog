@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>PyCharm - tomgou.xyz</title>
+    <title>Reading Summary of Dynamic Routing Between Capsules - tomgou.xyz</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,16 +10,22 @@
 
     <link href="http://blog.tomgou.xyz/images/carrot.jpg" rel="icon">
 
+<link rel="canonical" href="http://blog.tomgou.xyz/reading-summary-of-dynamic-routing-between-capsules.html">
 
-    <meta name="author" content="Yuchuan Gou" />
-    <meta name="keywords" content="PyCharm" />
+        <meta name="author" content="Tom Gou" />
+        <meta name="keywords" content="Capsule,CNN" />
+        <meta name="description" content="Reading Summary of Dynamic Routing Between Capsules" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="tomgou.xyz" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="tomgou.xyz"/>
-        <meta property="og:url" content="http://blog.tomgou.xyz"/>
-        <meta property="og:description" content="tomgou.xyz"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Reading Summary of Dynamic Routing Between Capsules"/>
+        <meta property="og:url" content="http://blog.tomgou.xyz/reading-summary-of-dynamic-routing-between-capsules.html"/>
+        <meta property="og:description" content="Reading Summary of Dynamic Routing Between Capsules"/>
+        <meta property="article:published_time" content="2018-03-16" />
+            <meta property="article:section" content="Blogs" />
+            <meta property="article:tag" content="Capsule" />
+            <meta property="article:tag" content="CNN" />
+            <meta property="article:author" content="Tom Gou" />
 
 
     <!-- Bootstrap -->
@@ -51,7 +57,7 @@ tomgou.xyz            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="http://blog.tomgou.xyz/category/blogs.html">Blogs</a>
                         </li>
             </ul>
@@ -91,13 +97,103 @@ tomgou.xyz            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">使用PyCharm配置Spark的Python开发环境</a></h2>
-                <div class="summary"><p>在本地搭建好Spark 1.6.0后，除了使用spark-submit提交Python程序外，我们可以使用PyCharm这个IDE在本地进行开发调试,提升我们的开发效率。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.tomgou.xyz/reading-summary-of-dynamic-routing-between-capsules.html"
+                       rel="bookmark"
+                       title="Permalink to Reading Summary of Dynamic Routing Between Capsules">
+                        Reading Summary of Dynamic Routing Between Capsules
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-03-16T20:20:00+08:00"> Fri 16 March 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://blog.tomgou.xyz/tag/capsule.html">Capsule</a>
+        /
+	<a href="http://blog.tomgou.xyz/tag/cnn.html">CNN</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+                <h3>1. Introduction</h3>
+<p>This paper proposed a novel neural network architecture called capsule network that combined a group of neuron to construct a capsule and dynamically connect these capsules by the correlation between two capsules. </p>
+<p>This paper is inspired by human vision system, like a hierarchical tree structure. Neurons will only pass the information to the part of the brain which can best handled the information. The defaults of CNN are also the motivation of this paper. Traditional CNN uses multiple layers of filters to achieve translation invariance. Max-pooling layers throw away a lot of necessary information of an object, such as positions and orientations.</p>
+<p>Capsule neural network uses “activity vectors” to learn the pose of an object, such as position and orientations, while CNN throws these low level details of an object away through max-pooling layer and only learns shapes and colors. And iterative dynamic routing provides an alternative of calculating how a capsule is activated by using local features’ properties. </p>
+<p>The paper used “squashing” function as the non-linear activation function, because this function can be used to the vector instead of normal scalar. And the iterative dynamic routing process determined coupling coefficients of prediction vectors.</p>
+<p>CapsNet consists of 3 layer and an additional reconstruction loss. The first layer is ReLU Conv1 (a convolution layer with 9x9 kernels output 256 channels, stride 1, no padding with ReLU). The second layer is PrimaryCapsules (a convolution capsule layer with 9x9 kernel output 32x6x6 8-D capsule, stride 2, no padding). The final layer is DigitCaps (Capsule output computed from a Wij (16x8 matrix) between ui and vj (i from 1 to 32x6x6 and j from 1 to 10). The architecture of reconstruction consists of FC1 (Fully connected with ReLU of size 512), FC2 (Fully connected with ReLU of size 1024) and FC sigmoid (Fully connected with sigmoid of size 784 [28x28 image]).</p>
+<p>The proposed capsule neural network architecture was trained with both MNIST and MultiMNIST dataset that consists of pictures of overlapping digits. Both of the experiments achieved better performance comparing with CNN models that have similar parameter sizes.</p>
+<h3>2. Related Work</h3>
+<p>(1))    “Learning to parse images” by Geoffrey E Hinton et al.</p>
+<p>(2) “Transforming auto-encoders” by Geoffrey E Hinton et al.</p>
+<p>(3) “Adam: A method for stochastic optimization” by Kingma and Ba.</p>
+<p>(4) “A parallel computation that assigns canonical object-based frames of reference” by Geoffrey E Hinton. </p>
+<p>(5) “Crowding is unlike ordinary masking: Distinguishing feature integration from detection” by Denis G Pelli et al.</p>
+<p>(6) “Spatial transformer networks” by Max Jaderberg et al. </p>
+<p>(7) “A neurobiological model of visual attention and invariant pattern recognition based on dynamic routing of information” by Bruno A Olshausen et al. </p>
+<h3>3. Strong Points</h3>
+<p>(1) The paper use capsules instead of two normal layers. Capsules allow vector input and output, and the length of the output vector can represent the probability that the entity represented by the capsule is present in the current input.</p>
+<p>(2) This activate function is applied to non-linearization of capsules. Instead of normal activate function for scalar, squad can be applied to vector.</p>
+<p>(3) Applying margin loss instead of cross entropy to allow for multiple digits.</p>
+<p>(4) CapsNet uses only 3 layers and get a low test error of 0.25% that was only achieved by deeper networks.</p>
+<p>(5) CapsNet is moderately robust to affine transformations, it achieved 79% accuracy on the affnist test set (each example is an MINIST with a random small affine transformation), 13% better than the traditional model’s accuracy.</p>
+<p>(6) Adding the reconstruction regularizer accelerate the routing performance by enforcing the encoding in the capsule vector.</p>
+<h3>4. Weak Points</h3>
+<p>(1) The paper would have been more completed if it discusses the limitations of the CapsNet design.</p>
+<p>(2) The paper could have some explanation on the reason of not adding more capsule layers to improve the performance.</p>
+<p>(3) The paper didn’t mention how many experiments were performed on the same dataset. The results could have been more faithful if they were supported by significant set of experiments instead of just once.</p>
+<h3>5. Follow-ups</h3>
+<p>Hinton published a new paper “MATRIX CAPSULES WITH EM ROUTING”, it show some new ideas like make capsule using matrix and a new routing algorithm.</p>
+<h3>6. New Ideas</h3>
+<p>(1) Remove the convolutional network in capsnet instead of using capsules.</p>
+<p>(2) Improve routing algorithm because the original routing algorithm is too simple for larger neural network.</p>
+<p>(3) Improve the clustering learning in unsupervised learning study by routing-by-agreement.</p>
+<p>Reference:</p>
+<p>[1] <a href="https://blog.csdn.net/maltliquor/article/details/78422557?locationNum=10&amp;fps=1">https://blog.csdn.net/maltliquor/article/details/78422557?locationNum=10&amp;fps=1</a></p>
+<p>[2] <a href="https://blog.csdn.net/zchang81/article/details/78382472">https://blog.csdn.net/zchang81/article/details/78382472</a></p>
+<p>[3] <a href="https://www.zhihu.com/question/67287444">https://www.zhihu.com/question/67287444</a></p>
+            </div>
+            <!-- /.entry-content -->
+            
+    <hr />
+    <!-- AddThis Button BEGIN -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d3af0e9a805928"></script>
+    <!-- AddThis Button END -->
+
+<!-- 多说评论框 start -->
+    <div class="ds-thread"  data-url="blog.tomgou.xyz/reading-summary-of-dynamic-routing-between-capsules.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tomgou"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+            
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -244,7 +340,7 @@ tomgou.xyz            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2016 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,
@@ -300,6 +396,8 @@ tomgou.xyz            </a>
         })();
     </script>
     <!-- End Google Analytics Code -->
+
+
 
 </body>
 </html>

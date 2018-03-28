@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>PyCharm - tomgou.xyz</title>
+    <title>Reading Summary of Visualizing and Understanding Convolutional Networks - tomgou.xyz</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,16 +10,21 @@
 
     <link href="http://blog.tomgou.xyz/images/carrot.jpg" rel="icon">
 
+<link rel="canonical" href="http://blog.tomgou.xyz/reading-summary-of-visualizing-and-understanding-convolutional-networks.html">
 
-    <meta name="author" content="Yuchuan Gou" />
-    <meta name="keywords" content="PyCharm" />
+        <meta name="author" content="Tom Gou" />
+        <meta name="keywords" content="CNN" />
+        <meta name="description" content="Reading Summary of Visualizing and Understanding Convolutional Networks" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="tomgou.xyz" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="tomgou.xyz"/>
-        <meta property="og:url" content="http://blog.tomgou.xyz"/>
-        <meta property="og:description" content="tomgou.xyz"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Reading Summary of Visualizing and Understanding Convolutional Networks"/>
+        <meta property="og:url" content="http://blog.tomgou.xyz/reading-summary-of-visualizing-and-understanding-convolutional-networks.html"/>
+        <meta property="og:description" content="Reading Summary of Visualizing and Understanding Convolutional Networks"/>
+        <meta property="article:published_time" content="2018-03-23" />
+            <meta property="article:section" content="Blogs" />
+            <meta property="article:tag" content="CNN" />
+            <meta property="article:author" content="Tom Gou" />
 
 
     <!-- Bootstrap -->
@@ -51,7 +56,7 @@ tomgou.xyz            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="http://blog.tomgou.xyz/category/blogs.html">Blogs</a>
                         </li>
             </ul>
@@ -91,13 +96,98 @@ tomgou.xyz            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">使用PyCharm配置Spark的Python开发环境</a></h2>
-                <div class="summary"><p>在本地搭建好Spark 1.6.0后，除了使用spark-submit提交Python程序外，我们可以使用PyCharm这个IDE在本地进行开发调试,提升我们的开发效率。</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.tomgou.xyz/shi-yong-pycharmpei-zhi-sparkde-pythonkai-fa-huan-jing.html">more ...</a>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.tomgou.xyz/reading-summary-of-visualizing-and-understanding-convolutional-networks.html"
+                       rel="bookmark"
+                       title="Permalink to Reading Summary of Visualizing and Understanding Convolutional Networks">
+                        Reading Summary of Visualizing and Understanding Convolutional Networks
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-03-23T22:50:00+08:00"> Fri 23 March 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://blog.tomgou.xyz/tag/cnn.html">CNN</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+                <h3>1. Introduction</h3>
+<p>Large convolutional network models have impressive performance, but there is no clear understanding of why these performances are well and how to improve the model.
+This paper introduced a visualization technique that reveals the input stimuli that excite individual feature maps at the model layers. This method helps us to observe the training features evolution and debug model problems.</p>
+<p>Components:</p>
+<p>(1) Feature activations are mapped back to input pixel space by setting other activations in the layer to zero and successively unpooling, rectifying and filtering (using the same parameters).</p>
+<p>(2) Unpooling: The max pooling operation is non-invertible, but we can obtain an approximate inverse by recording the locations of the maxima within each pooling region in a set of switch variables. In the deconvnet, the unpooling operation uses these switches to place the reconstructions from the layer above into appropriate locations, preserving the structure of the stimulus.</p>
+<p>(3) Rectification: The convnet uses relu non-linearities, which rectify the feature maps thus ensuring the feature maps are always positive. To obtain valid feature reconstructions at each layer (which also should be positive), the deconvnet pass the reconstructed signal through a relu non-linearity.</p>
+<p>(4) Filtering: The convnet uses learned filters to con- volve the feature maps from the previous layer. The deconvnet uses transposed versions of the same filters, but applied to the rectified maps, not the output of the layer beneath. </p>
+<p>Experiments:</p>
+<p>The paper’s model outperformed the architecture of (Krizhevsky et al. 2012), and beating their single model result by 1.7%. Other test results are also good.</p>
+<h3>2. Related Work</h3>
+<p>(1) Erhan, D., Bengio, Y., Courville, A., and Vincent, P. Visualizing higher-layer features of a deep network. In Technical report, University of Montreal, 2009.</p>
+<p>(2) Le, Q. V., Ngiam, J., Chen, Z., Chia, D., Koh, P., and Ng, A. Y. Tiled convolutional neural networks. In NIPS, 2010. </p>
+<p>(3) Donahue, J., Jia, Y., Vinyals, O., Hoffman, J., Zhang, N., Tzeng, E., and Darrell, T. DeCAF: A deep con- volutional activation feature for generic visual recog- nition. In arXiv:1310.1531, 2013. </p>
+<h3>3. Strong Points</h3>
+<p>(1) This paper provide a technique can reveal the input stimuli that excite individual feature maps at any layers. We can observe evolution of features during training. It reveal the features to be far from random, uninterpretable patterns.</p>
+<p>(2) The paper’s method show many intuitively desirable properties such as compositionality, increasing invariance and class discrimination.</p>
+<p>(3) The paper’s method can help to debug problems in the model. For example, the paper’s model outperformed the architecture of (Krizhevsky et al. 2012), and beating their single model result by 1.7%.</p>
+<p>(4) The paper’s visualizations show that small transformations have a huge effect on lower layers and lesser effect on higher layers. The model is fairly stable to translation and scaling, not so much to rotation.</p>
+<h3>4. Weak Points</h3>
+<p>(1) The paper increased the size of middle convolutional layer in the ImageNet, and this enlarged the fully connected layers overfitting.</p>
+<p>(2) For PASCAL 2012 dataset, the paper’s result was 3.2% lower than the leading result. This is because PASCAL images can contain multiple objects but the paper’s model only provide single prediction.</p>
+<p>(3) The intuition for choice of smaller filters wasn't convincing for me.</p>
+<h3>5. Follow-ups</h3>
+<p>I think this paper has many follow-ups, a lot of papers cited it. And I found that in Hinton’s paper “Dynamic Routing Between Capsules”, it provide a reconstruction module to visualize the image and also it improve the results. And its idea is similar to this paper.</p>
+<h3>6. New Ideas</h3>
+<p>(1) Add deconvnet to some deeper convolutional neural network to get better performance.</p>
+<p>(2) Build visualization module for some other neural networks and it may help debug the model problem.</p>
+<p>Reference:</p>
+<p>[1] <a href="http://www.shortscience.org/paper?bibtexKey=journals/corr/ZeilerF13#abhshkdz">http://www.shortscience.org/paper?bibtexKey=journals/corr/ZeilerF13#abhshkdz</a></p>
+<p>[2] <a href="https://blog.csdn.net/tina_ttl/article/details/52048765">https://blog.csdn.net/tina_ttl/article/details/52048765</a></p>
+<p>[3] <a href="https://www.jianshu.com/p/0718963bf3b5">https://www.jianshu.com/p/0718963bf3b5</a></p>
+<p>[4] <a href="https://blog.csdn.net/xjz18298268521/article/details/52381830">https://blog.csdn.net/xjz18298268521/article/details/52381830</a></p>
+            </div>
+            <!-- /.entry-content -->
+            
+    <hr />
+    <!-- AddThis Button BEGIN -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d3af0e9a805928"></script>
+    <!-- AddThis Button END -->
+
+<!-- 多说评论框 start -->
+    <div class="ds-thread"  data-url="blog.tomgou.xyz/reading-summary-of-visualizing-and-understanding-convolutional-networks.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tomgou"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+            
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -244,7 +334,7 @@ tomgou.xyz            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2016 Yuchuan Gou
+         <div class="col-xs-10">&copy; 2018 Yuchuan Gou
             &middot; Powered by 
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,
@@ -300,6 +390,8 @@ tomgou.xyz            </a>
         })();
     </script>
     <!-- End Google Analytics Code -->
+
+
 
 </body>
 </html>
